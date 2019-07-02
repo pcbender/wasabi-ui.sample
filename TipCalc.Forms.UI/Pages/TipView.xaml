@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<views:MvxContentPage x:TypeArguments="viewModels:TipViewModel"
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:TipCalc.Core.ViewModels;assembly=TipCalc.Core"
+    xmlns:android="condition:__ANDROID__"
+    xmlns:ios="condition:__IOS__"
+    xmlns:wpf="condition:__WPF__"
+    xmlns:uwp="condition:__UWP__"
+    xmlns:usecc="condition:__USE_CC__"
+    xmlns:usesc="condition:!__USE_CC__"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="android ios wpf uwp usecc usesc"
+    mc:ProcessContent="android:* ios:* wpf:* uwp:* usecc:* usesc:*"
+    x:Class="TipCalc.Forms.UI.Pages.TipView">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label Text="Subtotal" />
+            <Entry x:Name="SubTotalEntry" 
+                   Keyboard="Numeric"
+                   mvx:Bi.nd="Text SubTotal, Mode=TwoWay"/>
+            <Label Text="Generosity" />
+            <Slider x:Name="GenerositySlider"
+                    Maximum="100"
+                    mvx:Bi.nd="Value Generosity, Mode=TwoWay"/>
+            <Label Text="Tip to leave" />
+            <Label x:Name="TipLabel" 
+                   mvx:Bi.nd="Text Tip"/>
+            <Label Text="Always visible" VerticalOptions="Center" HorizontalOptions="Center"
+                       android:TextColor="Green"
+                       ios:TextColor="Blue"
+                       wpf:TextColor="Red" 
+                       uwp:TextColor="Gold"/>
+            <android:Label Text="Android only" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <ios:Label Text="iOS only" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <wpf:Label Text="WPF only" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <uwp:Label Text="UWP only" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <usesc:Button Text="I'm a standard control"></usesc:Button>
+            <usecc:ImageButton Source="XamarinLogo.png"></usecc:ImageButton>
+        </StackLayout>
+    </ContentPage.Content>
+</views:MvxContentPage>
