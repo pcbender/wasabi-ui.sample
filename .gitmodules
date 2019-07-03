@@ -1,0 +1,4 @@
+[submodule "wasabi-ui"]
+	path = wasabi-ui
+	url = https://github.com/pcbender/wasabi-ui.git
+	branch = master
