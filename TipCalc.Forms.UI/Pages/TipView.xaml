@@ -9,11 +9,12 @@
     xmlns:ios="condition:__IOS__"
     xmlns:wpf="condition:__WPF__"
     xmlns:uwp="condition:__UWP__"
+    xmlns:web="condition:__WEB__"
     xmlns:usecc="condition:__USE_CC__"
     xmlns:usesc="condition:!__USE_CC__"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="android ios wpf uwp usecc usesc"
-    mc:ProcessContent="android:* ios:* wpf:* uwp:* usecc:* usesc:*"
+    mc:Ignorable="android ios wpf uwp web usecc usesc"
+    mc:ProcessContent="android:* ios:* wpf:* uwp:* web:* usecc:* usesc:*"
     x:Class="TipCalc.Forms.UI.Pages.TipView">
     <ContentPage.Content>
         <StackLayout Margin="10">
@@ -32,11 +33,13 @@
                        android:TextColor="Green"
                        ios:TextColor="Blue"
                        wpf:TextColor="Red" 
-                       uwp:TextColor="Gold"/>
+                       uwp:TextColor="Gold"
+                       web:TextColor="Brown"/>
             <android:Label Text="Android only" VerticalOptions="Center" HorizontalOptions="Center"/>
             <ios:Label Text="iOS only" VerticalOptions="Center" HorizontalOptions="Center"/>
             <wpf:Label Text="WPF only" VerticalOptions="Center" HorizontalOptions="Center"/>
             <uwp:Label Text="UWP only" VerticalOptions="Center" HorizontalOptions="Center"/>
+            <web:Label Text="Web only" VerticalOptions="Center" HorizontalOptions="Center"/>
             <usesc:Button Text="I'm a standard control"></usesc:Button>
             <usecc:ImageButton Source="XamarinLogo.png"></usecc:ImageButton>
         </StackLayout>

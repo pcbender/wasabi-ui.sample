@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web" InitialTargets="SetWccDefinitions">
+  <Target Name="SetWccDefinitions">
+    <VariableConstants TaskAction="Set" Value="__WEB__" />
+  </Target>
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EmbeddedBlazorContent" Version="1.2.0" />
+    <PackageReference Include="MatBlazor" Version="1.2.0" />
+    <PackageReference Include="MvvmCross.Forms" Version="6.3.1" />
+    <PackageReference Include="MvvmCross.Plugin.Messenger" Version="6.3.1" />
+    <PackageReference Include="WasabiUI.Forms.Build.Tools" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TipCalc.Core\TipCalc.Core.csproj" />
+    <ProjectReference Include="..\TipCalc.Forms.UI\TipCalc.Forms.UI.csproj" />
+    <ProjectReference Include="..\wasabi-ui\WasabiUI.Forms.Components\WasabiUI.Forms.Components.csproj" />
+    <ProjectReference Include="..\wasabi-ui\WasabiUI.Forms.Core\WasabiUI.Forms.Core.csproj" />
+    <ProjectReference Include="..\wasabi-ui\WasabiUI.Forms.Platform.Blazor\WasabiUI.Forms.Platform.Blazor.csproj" />
+    <ProjectReference Include="..\wasabi-ui\WasabiUI.MvvmCross.Forms\WasabiUI.MvvmCross.Forms.csproj" />
+    <ProjectReference Include="..\wasabi-ui\WasabiUI.MvvmCross\WasabiUI.MvvmCross.csproj" />
+  </ItemGroup>
+
+</Project>
