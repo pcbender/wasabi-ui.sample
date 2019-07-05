@@ -26,6 +26,15 @@
 <body>
     <app>@(await Html.RenderComponentAsync<App>())</app>
 
-    <script src="_framework/blazor.server.js"></script>
+<script src="_framework/blazor.server.js"></script>
+<script>
+    window.getOrientation = () => {
+        return screen.orientation.type;
+    }
+    window.addEventListener("orientationchange", (e, d) => {
+        DotNet.invokeMethod("WasabiUI.Forms.Core", "OrientationChanged", screen.orientation.type);
+    });
+</script>
+
 </body>
 </html>

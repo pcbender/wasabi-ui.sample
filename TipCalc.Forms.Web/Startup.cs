@@ -1,3 +1,4 @@
+using AutoMapper;
 using EmbeddedBlazorContent;
 using MatBlazor;
 using Microsoft.AspNetCore.Builder;
@@ -6,6 +7,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WasabiUI.Forms.Core;
+using WasabiUI.Forms.Platform.Blazor.Formatters;
+using WasabiUI.Forms.Platform.Blazor.Maps;
 
 namespace TipCalc.Forms.Web
 {
@@ -31,6 +35,9 @@ namespace TipCalc.Forms.Web
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddAutoMapper(typeof(StackLayoutProfile));
+            services.AddStylePropertyFormatters(typeof(MarginFormatter).Assembly);
+            services.AddWasabiPlatformServices();
 
         }
 
@@ -51,6 +58,7 @@ namespace TipCalc.Forms.Web
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseEmbeddedBlazorContent(typeof(BaseMatComponent).Assembly);
+            app.UseEmbeddedBlazorContent(typeof(TipCalc.Forms.Web.Pages.MainPage).Assembly);
 
             app.UseRouting();
 
@@ -59,6 +67,8 @@ namespace TipCalc.Forms.Web
                 endpoints.MapBlazorHub();
                 endpoints.MapFallbackToPage("/_Host");
             });
+
+            app.UseWasabiPlatform();
         }
     }
 }

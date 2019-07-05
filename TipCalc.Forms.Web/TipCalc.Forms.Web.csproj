@@ -8,6 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
     <PackageReference Include="EmbeddedBlazorContent" Version="1.2.0" />
     <PackageReference Include="MatBlazor" Version="1.2.0" />
     <PackageReference Include="MvvmCross.Forms" Version="6.3.1" />
@@ -25,4 +27,10 @@
     <ProjectReference Include="..\wasabi-ui\WasabiUI.MvvmCross\WasabiUI.MvvmCross.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="ExposedObject">
+      <HintPath>..\wasabi-ui\Lib\ExposedObject.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
 </Project>
