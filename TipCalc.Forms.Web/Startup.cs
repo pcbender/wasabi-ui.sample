@@ -1,4 +1,3 @@
-using AutoMapper;
 using EmbeddedBlazorContent;
 using MatBlazor;
 using Microsoft.AspNetCore.Builder;
@@ -8,8 +7,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WasabiUI.Forms.Core;
-using WasabiUI.Forms.Platform.Blazor.Formatters;
-using WasabiUI.Forms.Platform.Blazor.Maps;
 
 namespace TipCalc.Forms.Web
 {
@@ -35,8 +32,6 @@ namespace TipCalc.Forms.Web
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddAutoMapper(typeof(StackLayoutProfile));
-            services.AddStylePropertyFormatters(typeof(MarginFormatter).Assembly);
             services.AddWasabiPlatformServices();
 
         }
