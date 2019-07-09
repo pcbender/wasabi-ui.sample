@@ -61,6 +61,14 @@
                        uwp:TextColor="Gold"
                        web:TextColor="Brown"/>
             </Frame>
+            <ContentView>
+                <Label Text="I am inside a ContentView" VerticalOptions="Center" HorizontalOptions="Center"
+                       android:TextColor="Green"
+                       ios:TextColor="Blue"
+                       wpf:TextColor="Red" 
+                       uwp:TextColor="Gold"
+                       web:TextColor="Brown"/>
+            </ContentView>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>
