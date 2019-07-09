@@ -1,4 +1,5 @@
-﻿using MvvmCross.Forms.Views;
+﻿using System;
+using MvvmCross.Forms.Views;
 using TipCalc.Core.ViewModels;
 
 namespace TipCalc.Forms.UI.Pages
@@ -8,6 +9,10 @@ namespace TipCalc.Forms.UI.Pages
         public TipView()
         {
             InitializeComponent();
+        }
+
+        private void Button_OnClicked(object sender, EventArgs e)
+        {
         }
     }
 }

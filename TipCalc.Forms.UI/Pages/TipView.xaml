@@ -43,7 +43,8 @@
             <web:Label Text="Web only" VerticalOptions="Center" HorizontalOptions="Center"/>
             <usesc:Button Text="I'm a standard control"></usesc:Button>
             <usecc:ImageButton Source="XamarinLogo.png"></usecc:ImageButton>
-            <telerikInput:RadEntry x:Name="entry" WatermarkText="Enter first name"/>
+            <telerikInput:RadEntry x:Name="entry" WatermarkText="Enter first name" IsPassword="True"/>
+            <telerikInput:RadButton Text="RadButton" Clicked="Button_OnClicked"></telerikInput:RadButton>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>
