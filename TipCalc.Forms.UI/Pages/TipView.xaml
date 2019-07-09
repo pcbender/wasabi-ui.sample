@@ -45,6 +45,22 @@
             <usecc:ImageButton Source="XamarinLogo.png"></usecc:ImageButton>
             <telerikInput:RadEntry x:Name="entry" WatermarkText="Enter first name" IsPassword="True"/>
             <telerikInput:RadButton Text="RadButton" Clicked="Button_OnClicked"></telerikInput:RadButton>
+            <Frame HasShadow="True">
+                <Label Text="This is a frame with Shadow" VerticalOptions="Center" HorizontalOptions="Center"
+                           android:TextColor="Green"
+                           ios:TextColor="Blue"
+                           wpf:TextColor="Red" 
+                           uwp:TextColor="Gold"
+                           web:TextColor="Brown"/>
+            </Frame>
+            <Frame HasShadow="false">
+                <Label Text="This is a frame without Shadow" VerticalOptions="Center" HorizontalOptions="Center"
+                       android:TextColor="Green"
+                       ios:TextColor="Blue"
+                       wpf:TextColor="Red" 
+                       uwp:TextColor="Gold"
+                       web:TextColor="Brown"/>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>

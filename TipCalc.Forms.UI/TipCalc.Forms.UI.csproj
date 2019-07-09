@@ -21,4 +21,7 @@
     <ItemGroup>
       <Folder Include="Pages\" />
     </ItemGroup>
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+      <Exec Command="del /s/q $(ProjectDir)bin\$(ConfigurationName)\*.*" />
+    </Target>
 </Project>
