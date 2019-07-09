@@ -23,6 +23,7 @@
     <ProjectReference Include="..\wasabi-ui\WasabiUI.Forms.Platform.Blazor\WasabiUI.Forms.Platform.Blazor.csproj" />
     <ProjectReference Include="..\wasabi-ui\WasabiUI.MvvmCross.Forms\WasabiUI.MvvmCross.Forms.csproj" />
     <ProjectReference Include="..\wasabi-ui\WasabiUI.MvvmCross\WasabiUI.MvvmCross.csproj" />
+    <ProjectReference Include="..\wasabi-ui\WasabiUI.Telerik\WasabiUI.Telerik.csproj" />
   </ItemGroup>
 
   <ItemGroup>

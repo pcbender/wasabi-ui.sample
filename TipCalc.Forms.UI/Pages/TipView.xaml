@@ -5,6 +5,7 @@
     xmlns:views="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:mvx="clr-namespace:MvvmCross.Forms.Bindings;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:TipCalc.Core.ViewModels;assembly=TipCalc.Core"
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
     xmlns:android="condition:__ANDROID__"
     xmlns:ios="condition:__IOS__"
     xmlns:wpf="condition:__WPF__"
@@ -42,6 +43,7 @@
             <web:Label Text="Web only" VerticalOptions="Center" HorizontalOptions="Center"/>
             <usesc:Button Text="I'm a standard control"></usesc:Button>
             <usecc:ImageButton Source="XamarinLogo.png"></usecc:ImageButton>
+            <telerikInput:RadEntry x:Name="entry" WatermarkText="Enter first name"/>
         </StackLayout>
     </ContentPage.Content>
 </views:MvxContentPage>
