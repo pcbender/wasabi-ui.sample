@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" InitialTargets="SetWccDefinitions">
-  <Target Name="SetWccDefinitions">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Target Name="SetWccDefinitions" AfterTargets="Restore">
     <VariableConstants TaskAction="Set" Value="__IOS__;__USE_CC__" />
   </Target>
   <PropertyGroup>

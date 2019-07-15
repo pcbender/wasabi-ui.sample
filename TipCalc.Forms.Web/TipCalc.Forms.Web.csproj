@@ -1,5 +1,5 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web" InitialTargets="SetWccDefinitions">
-  <Target Name="SetWccDefinitions">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <Target Name="SetWccDefinitions" AfterTargets="Restore">
     <VariableConstants TaskAction="Set" Value="__WEB__" />
   </Target>
 <PropertyGroup>

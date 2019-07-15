@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WasabiUI.Forms.Core;
+using Xamarin.Forms;
 
 namespace TipCalc.Forms.Web
 {
@@ -32,7 +33,16 @@ namespace TipCalc.Forms.Web
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddWasabiPlatformServices();
+            services.AddWasabiPlatformServices(config =>
+            {
+                config.UseFluidLayout = false;
+                config.IgnoreInlineStyles = false;
+                config.ScalingFactor = 1d;
+                config.ScaledScreenSize = new Size(1024,768);
+                config.PixelScreenSize = new Size(800,600);
+                config.CssUnit = CssUnit.Px;
+                config.SizeFactor = 1d;
+            });
 
         }
 
@@ -50,7 +60,6 @@ namespace TipCalc.Forms.Web
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseEmbeddedBlazorContent(typeof(BaseMatComponent).Assembly);
             app.UseEmbeddedBlazorContent(typeof(TipCalc.Forms.Web.Pages.MainPage).Assembly);
